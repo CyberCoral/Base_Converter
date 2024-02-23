@@ -78,9 +78,6 @@ def GeneralBaseConverter(num, original_base: int ,final_base: int, dictio: dict 
         It transforms a number in any base
         to decimal, given the dictionary dictio.
         '''
-       
-        sep_chars = lista[::-1][1:7][::-1]
-        lista = lista[::-1][16:][::-1]
 
         lista1 = []
 
@@ -103,7 +100,6 @@ def GeneralBaseConverter(num, original_base: int ,final_base: int, dictio: dict 
         return sum([int(lista1[k]) * base ** k for k in range(len(lista1))])
 
 
-    #✨
     def DecimalToBase(num, base: int, lista: list = alph3, dictio: dict = equivalencia):
         '''
         It converts a number in decimal form
@@ -139,7 +135,6 @@ def GeneralBaseConverter(num, original_base: int ,final_base: int, dictio: dict 
     ### Main conversion section.
     ###
 
-    num = BaseToDecimal(num, original_base, dictio, lista)
+    num = BaseToDecimal(num, original_base, lista, dictio)
     result = DecimalToBase(num,final_base, lista, dictio)  
     return result
-
